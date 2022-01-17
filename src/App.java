@@ -51,13 +51,24 @@ public class App {
         System.out.println(trueFlag ? falseFlag : trueFlag);
 
         /* 제어문 */
-        int value = 5;
+        int value = 6;
         if(value > 5) {
             System.out.println("value bigger than 5");
         } else if(value < 5) {
             System.out.println("value small than 5");
         } else {
             System.out.println("value is 5");
+        }
+
+        /* 제어문&연산자 조합 */
+        if(value == 6) {
+            System.out.println("value is 6");
+        }
+        if(value != 6) {
+            System.out.println("value is not 6");
+        }
+        if(value != 6) {
+            System.out.println("value is not 6");
         }
     }
 }
