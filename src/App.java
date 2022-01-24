@@ -1,4 +1,7 @@
 public class App {
+    /* 변수구분 */
+    static String classVariable; // 클래스변수
+    String instanceVariable; // 인스턴스변수
     public static void main(String[] args) throws Exception {
         /* 기본 자료형 변수 8개 */
         // 정수형 byte, short, int, long & 문자형 char 글자하나 입력시
@@ -102,5 +105,34 @@ public class App {
         /* 생성자 클래스호출 */
         TestClass testClass = new TestClass("이재학", "30살", "백수를 꿈꾸는 사람");
         testClass.introduce();
+
+        App app = new App();
+        /* 오버로딩 메소드 호출 */
+        // overLoading();
+
+        /* 재귀함수 호출 */
+        int recursiveSum = 0;
+        recursiveSum += app.recursive(3);
+        System.out.println(recursiveSum); // 3 + 2 + 1
     }
+
+    /* 메소드 오버로딩 */
+    public void overLoading() {
+        System.out.println("테스트 메소드");
+    }
+
+    public void overLoading(String test) {
+        System.out.println(test + " 메소드");
+    }
+
+    /* 재귀함수 */
+    public int recursive(int val) {
+        if(val == 1) {
+            System.out.println("재귀호출 종료");
+            return 1;
+        }
+        return val + recursive(val-1);
+    }
+
+
 }
